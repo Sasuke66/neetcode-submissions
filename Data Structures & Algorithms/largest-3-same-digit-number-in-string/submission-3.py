@@ -1,0 +1,6 @@
+class Solution:
+    def largestGoodInteger(self, num: str) -> str:
+        matches = re.findall(r'(\d)\1\1+', num)
+        if not matches:
+            return ""
+        return max(matches) * 3
